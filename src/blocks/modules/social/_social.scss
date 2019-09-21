@@ -1,0 +1,15 @@
+.social	{
+	display: flex;
+	&__link {
+		display: block;
+		margin-left: 16px;
+		svg {
+			display: block;
+			height: 27px;
+			width: 27px;
+		}
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}

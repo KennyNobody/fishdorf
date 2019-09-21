@@ -1,0 +1,23 @@
+.front-life {
+	&__container {
+		position: relative;
+		padding-top: 174px;
+		padding-bottom: 200px;
+	}
+	&__ill {
+		position: absolute;
+		top: 55px;
+		left: -238px;
+	}
+	&__content {
+		padding-left: 480px;
+		justify-content: space-between;
+		position: relative;
+		z-index: 2;
+	}
+	&__title {
+		position: relative;
+		left: -82px;
+		margin-bottom: 22px;
+	}
+}

@@ -1,5 +1,50 @@
 <header class="header">
-	<div class="container">
-		1. Шапка
+	<div class="container header__container">
+		<a href="index.html" class="header__logo">
+			<img src="./img/svg/logo.svg" alt="">
+		</a>
+		<div class="header__content">
+			<div class="header__topline">
+				<div class="header__items">
+					<div class="header__item">
+						<svg class="icon-svg">
+							<use xlink:href="./img/sprites/sprite.svg#icon-marker"></use>
+						</svg>
+						<p>
+							Калининградская обл., Полесский район,<br> пос. Матросово, ул. Левобережная, 21
+						</p>
+					</div>
+					<a href="tel:+74012521110" class="header__item header__item--link">
+						<svg class="icon-svg">
+							<use xlink:href="./img/sprites/sprite.svg#icon-phone"></use>
+						</svg>
+						<p>
+							+7 (4012) 52-11-10
+						</p>
+					</a>
+				</div>
+				@@include("../social/social.html")
+			</div>
+			<nav class="header__bottom-line">
+				<a href="" class="header__link header__link--active">
+					Главная
+				</a>
+				<a href="" class="header__link">
+					Номера
+				</a>
+				<a href="" class="header__link">
+					Номера
+				</a>
+				<a href="" class="header__link">
+					Развлечения
+				</a>
+				<a href="" class="header__link">
+					Новости
+				</a>
+				<a href="" class="header__link">
+					Контакты
+				</a>
+			</nav>
+		</div>
 	</div>
 </header>

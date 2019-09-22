@@ -1,6 +1,6 @@
 .front-features {
 	&__slider {
-
+		overflow: visible; 
 	}
 	&__slide {
 		padding-top: 139px;
@@ -22,6 +22,15 @@
 		position: absolute;
 		left: -120px;
 		top: -127px;
+	}
+	&__thumb {
+		width: 100%;
+		height: 556px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 	&__content {
 		margin-bottom: 30px;

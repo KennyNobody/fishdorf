@@ -2,4 +2,7 @@
 	height: 680px;
 	color: $light;
 	background-color: $accent;
+	@include r(1080) {
+		display: none;
+	}
 }

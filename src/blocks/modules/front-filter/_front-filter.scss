@@ -1,6 +1,11 @@
 .filter {
 	position: relative;
 	z-index: 2;
+	padding-left: 15px;
+	padding-right: 15px;
+	@include r(1080) {
+		margin-bottom: 25px;
+	}
 	&__wrapper {
 		width: 100%;
 		max-width: 1116px;
@@ -11,5 +16,8 @@
 		border-radius: 8px;
 		height: 120px;
 		margin-top: -61px;
+		@include r(1080) {
+			margin-top: 0px;
+		}
 	}
 }

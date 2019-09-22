@@ -3,14 +3,24 @@
 		position: relative;
 		padding-top: 174px;
 		padding-bottom: 200px;
+		@include r(1080) {
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
 	}
 	&__ill {
 		position: absolute;
 		top: 55px;
 		left: -238px;
+		@include r(1080) {
+			display: none;
+		}
 	}
 	&__content {
 		padding-left: 480px;
+		@include r(1080) {
+			padding-left: 0px;
+		}
 		justify-content: space-between;
 		position: relative;
 		z-index: 2;
@@ -19,5 +29,8 @@
 		position: relative;
 		left: -82px;
 		margin-bottom: 22px;
+		@include r(1080) {
+			left: 0px;
+		}
 	}
 }

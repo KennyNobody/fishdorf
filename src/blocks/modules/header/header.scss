@@ -3,15 +3,29 @@
 	padding-bottom: 21px;
 	&__container {
 		display: flex;
+		@include r(1080) {
+			align-items: center;
+		}
 	}
 	&__logo {
 		display: block;
 		flex-shrink: 0;
 		margin-right: 42px;
+		@include r(440) {
+			margin-right: 20px;
+		}
 		img {
 			display: block;
 			width: 130px;
 			height: 136px;
+			@include r(1080) {
+				height: 100px;
+				width: 100px;
+			}
+			@include r(440) {
+				height: 80px;
+				width: 80px;
+			}
 		}
 		&:hover {
 			opacity: 0.7;
@@ -25,9 +39,17 @@
 		margin-bottom: 50px;
 		display: flex;
 		justify-content: space-between;
+		@include r(1080) {
+			justify-content: flex-end;
+			margin-bottom: 0px;
+			align-items: center;
+		}
 	}
 	&__items {
 		display: flex;
+		@include r(1080) {
+			display: none;
+		}
 	}
 	&__item {
 		display: flex;
@@ -52,6 +74,9 @@
 	&__bottom-line {
 		display: flex;
 		justify-content: space-between;
+		@include r(1080) {
+			display: none;
+		}
 	}
 	&__link {
 		font-weight: 600;
@@ -73,6 +98,49 @@
 				display: block;
 				position: absolute;
 			}
+		}
+	}
+	&__languages {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 12px;
+	}
+	&__language {
+		font-weight: 800;
+		font-size: 16px;
+		line-height: 20px;
+		text-decoration: none;
+		color: $accent;
+		&:hover {
+			opacity: 0.7;
+		}
+		&--now {
+			color: $red;
+			pointer-events: none;
+		}
+	}
+	&__lang-separator {
+		width: 2px;
+		height: 15px;
+		background-color: $accent;
+	}
+	&__burger {
+		padding: 20px;
+		cursor: pointer;
+		margin-left: 20px;
+		display: none;
+		@include r(440) {
+			padding: 10px;
+		}
+		@include r(1080) {
+			display: block;
+		}
+		svg {
+			fill: $dark;
+			height: 24px;
+			display: block;
+			width: 24px;
 		}
 	}
 }

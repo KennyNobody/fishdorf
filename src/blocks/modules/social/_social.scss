@@ -11,5 +11,8 @@
 		&:hover {
 			opacity: 0.7;
 		}
+		&:first-child {
+			margin-left: 0px;
+		}
 	}
 }

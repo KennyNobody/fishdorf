@@ -1,0 +1,153 @@
+.front-news {
+	position: relative;
+	&:after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		bottom: 0px;
+		right: 0px;
+		left: 0px;
+		height: 520px;
+		background-color: $green-light;
+	}
+	&__container {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		position: relative;
+	}
+	&__title {
+		margin-bottom: 25px;
+		position: relative;
+	}
+	&__decor {
+		position: absolute;
+		left: -120px;
+		top: -127px;
+	}
+	&__slider {
+
+	}
+	&__control {
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 93px;
+	}
+	&__prev {
+		width: 30px;
+		height: 30px;
+		border: 1px solid $accent;
+		border-radius: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		transition: 0.3s all;
+		&--disabled {
+			border-color: $light;
+			pointer-events: none;
+		}
+		svg {
+			transform: rotate(180deg);
+			fill: $accent;
+			height: 15px;
+			width: 12px;
+		}
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	&__next {
+		width: 30px;
+		height: 30px;
+		border: 1px solid $accent;
+		border-radius: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		transition: 0.3s all;
+		margin-left: 5px;
+		&--disabled {
+			border-color: $light;
+			pointer-events: none;
+		}
+		svg {
+			fill: $accent;
+			height: 15px;
+			width: 12px;
+		}
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	&__slider-wrapper {
+		padding-top: 52px;
+		padding-bottom: 52px;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__article {
+		border-radius: 8px;
+		overflow: hidden;
+		width: calc(33% - 15px);
+		background-color: $light;
+		top: 0px;
+		position: relative;
+		&:nth-child(1) {
+			top: -52px;
+		}
+		&:nth-child(3) {
+			top: 52px;
+		}
+	}
+	&__thumb {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+	}
+	&__content {
+		padding: 10px 15px;
+	}
+	&__time {
+		color: $green-light;
+		margin-bottom: 12px;
+		font-weight: 600;
+	}
+	&__name {
+		white-space: nowrap;
+		width: 100%;
+		overflow-x: hidden;
+		text-overflow: ellipsis;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 22px;
+		margin-bottom: 14px;
+	}
+	&__text {
+		margin-bottom: 25px;
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		border-top: 2px solid $green-light;
+		padding-top: 14px;
+		padding-bottom: 14px;
+		font-weight: 800;
+		font-size: 16px;
+		line-height: 20px;
+		color: $accent;
+		text-decoration: none;
+		svg {
+			height: 18px;
+			width: 14px;
+			fill: $accent;
+			margin-left: 15px;
+		}
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}

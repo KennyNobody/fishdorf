@@ -14,10 +14,28 @@
 	&__title {
 		font-weight: 600;
 		color: $accent;
+		display: block;
+		&--link {
+			margin-bottom: 10px;
+			text-decoration: none;
+			color: $accent;
+			&:hover {
+				color: $dark;
+			}
+		}
 	}
 	&__text {
+		display: block;
 		&--accent {
 			color: $accent;
+		}
+		&--link {
+			text-decoration: none;
+			color: $dark;
+			margin-bottom: 10px;
+			&:hover {
+				color: $accent;
+			}
 		}
 		a {
 			text-decoration: none;
@@ -48,6 +66,30 @@
 .footer-middle {
 	padding-top: 24px;
 	padding-bottom: 24px;
+	flex-shrink: 0;
+	display: flex;
+	&__left {
+		width: 212px;
+		padding-top: 18px;
+	}
+	&__right {
+		min-width: 0px;
+		display: flex;
+		padding-left: 51px;
+		flex-grow: 1;
+	}
+	&__booking {
+		width: 128px;
+		height: 135px;
+		background-color: $accent;
+		margin-bottom: 60px;
+	}
+	&__social {
+		padding-top: 15px;
+	}
+	&__column {
+		width: calc(100% / 3);
+	}
 }
 
 .footer-bottom {

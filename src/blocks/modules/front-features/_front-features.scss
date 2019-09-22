@@ -1,0 +1,52 @@
+.front-features {
+	&__slider {
+
+	}
+	&__slide {
+		padding-top: 139px;
+		display: flex;
+	}
+	&__slide-left {
+		width: calc(100% / 12 * 5);
+		padding-right: 73px;
+	}
+	&__slide-right {
+		width: calc(100% / 12 * 7);
+		padding-right: 73px;
+	}
+	&__title {
+		position: relative;
+		margin-bottom: 65px;
+	}
+	&__decor {
+		position: absolute;
+		left: -120px;
+		top: -127px;
+	}
+	&__content {
+		margin-bottom: 30px;
+	}
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 800;
+		font-size: 16px;
+		color: $light;
+		background-color: $dark;
+		border-radius: 50px;
+		line-height: 20px;
+		width: 204px;
+		height: 40px;
+		text-decoration: none;
+		svg {
+			height: 14px;
+			width: 14px;
+			margin-left: 8px;
+			fill: $light;
+		}
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}

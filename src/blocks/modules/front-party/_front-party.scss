@@ -1,0 +1,95 @@
+.front-party {
+	&__container {
+		position: relative;
+		padding-top: 122px;
+		padding-bottom: 44px;
+		&:after {
+			content: "";
+			background-color: $green-light;
+			position: absolute;
+			bottom: 0px;
+			left: 157px;
+			right: 157px;
+			height: 450px;
+			z-index: -1;
+		}
+	}
+	&__title {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 100px;
+	}
+	&__decor {
+		position: absolute;
+		right: -100px;
+		top: -130px;
+		z-index: -1;
+	}
+	&__slider {
+
+	}
+	&__article {
+		position: relative;
+		text-decoration: none;
+		top: 0px;
+		width: 245px;
+		display: inline-block;
+		margin-bottom: 36px;
+		&:hover {
+			top: -20px;
+			.front-party__name {
+				color: $accent;
+			}
+		}
+	}
+	&__thumb {
+		height: 330px;
+		margin-bottom: 16px;
+		width: 100%;
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__name {
+		font-size: 20px;
+		line-height: 25px;
+		font-weight: 800;
+		color: $dark;
+		text-decoration: none;
+		font-family: $title-font;
+		text-decoration: none;
+		transition: 0.3s all;
+	}
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
+		width: 204px;
+		height: 40px;
+		color: $accent;
+		text-decoration: none;
+		font-weight: 800;
+		font-size: 16px;
+		line-height: 20px;
+		border: 1px solid $accent;
+		border-radius: 35px;
+		svg {
+			width: 12px;
+			height: 9px;
+			margin-left: 16px;
+			fill: $accent;
+		}
+		&:hover {
+			background-color: $accent;
+			color: $light;
+			svg {
+				fill: $light;
+			}
+		}
+	}
+}

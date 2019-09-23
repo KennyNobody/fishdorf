@@ -28,6 +28,8 @@
 		display: flex;
 		max-width: 374px;
 		border-bottom: 2px solid $green-light;
+		z-index: 2;
+		position: relative;
 	}
 	&__tab {
 		color: $accent;
@@ -53,6 +55,12 @@
 				height: 2px;
 				background-color: $dark;
 			}
+		}
+	}
+	&__block {
+		&--hidden {
+			overflow: hidden;
+			height: 0px; 
 		}
 	}
 	&__swiper-control {

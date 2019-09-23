@@ -12,8 +12,14 @@ svg, a {
 	font-family: $main-font;
 	font-size: 16px;
     overflow-x: hidden;
-	line-height: 1.3;
+    line-height: 1.3;
     background-color: $light;
+    @include r(1080) {
+
+    }
+    @include r(440) {
+
+    }
 }
 
 .container {

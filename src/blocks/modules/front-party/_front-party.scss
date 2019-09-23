@@ -1,5 +1,6 @@
 .front-party {
 	&__container {
+		overflow: hidden;
 		position: relative;
 		padding-top: 122px;
 		padding-bottom: 44px;
@@ -26,15 +27,19 @@
 		z-index: -1;
 	}
 	&__slider {
-
+		
+	}
+	&__swiper-container {
+		overflow: visible; 
 	}
 	&__article {
 		position: relative;
 		text-decoration: none;
 		top: 0px;
 		width: 245px;
-		display: inline-block;
+		display: block;
 		margin-bottom: 36px;
+		transition: 0.3s all;
 		&:hover {
 			top: -20px;
 			.front-party__name {
@@ -62,6 +67,9 @@
 		font-family: $title-font;
 		text-decoration: none;
 		transition: 0.3s all;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	&__link {
 		display: flex;

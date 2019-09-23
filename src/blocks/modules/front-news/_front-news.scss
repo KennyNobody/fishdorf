@@ -30,7 +30,7 @@
 	&__control {
 		display: flex;
 		justify-content: flex-end;
-		margin-bottom: 93px;
+		margin-bottom: 40px;
 	}
 	&__prev {
 		width: 30px;
@@ -42,10 +42,6 @@
 		align-items: center;
 		cursor: pointer;
 		transition: 0.3s all;
-		&--disabled {
-			border-color: $light;
-			pointer-events: none;
-		}
 		svg {
 			transform: rotate(180deg);
 			fill: $accent;
@@ -67,10 +63,6 @@
 		cursor: pointer;
 		transition: 0.3s all;
 		margin-left: 5px;
-		&--disabled {
-			border-color: $light;
-			pointer-events: none;
-		}
 		svg {
 			fill: $accent;
 			height: 15px;
@@ -80,25 +72,34 @@
 			opacity: 0.7;
 		}
 	}
+	&__btn {
+		&--disabled {
+			border-color: $light;
+			pointer-events: none;
+			opacity: 0.7;
+		}
+	}
 	&__slider-wrapper {
 		padding-top: 52px;
 		padding-bottom: 52px;
 		display: flex;
 		justify-content: space-between;
+		.swiper-slide-active {
+			top: -52px;
+		}
+		.swiper-slide-next {
+			top: 0px;
+		}
 	}
 	&__article {
 		border-radius: 8px;
 		overflow: hidden;
 		width: calc(33% - 15px);
 		background-color: $light;
-		top: 0px;
+		top: 52px;
 		position: relative;
-		&:nth-child(1) {
-			top: -52px;
-		}
-		&:nth-child(3) {
-			top: 52px;
-		}
+		transition: 0.3s;
+		
 	}
 	&__thumb {
 		img {

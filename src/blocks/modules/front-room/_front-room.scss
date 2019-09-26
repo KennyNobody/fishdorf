@@ -3,6 +3,10 @@
 		padding-top: 153px;
 		padding-bottom: 133px;
 		position: relative;
+		@include r(1080) {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
 		&:after {
 			content: "";
 			z-index: -1;
@@ -12,6 +16,9 @@
 			width: 100vw;
 			left: 440px;
 			background-color: $accent;
+			@include r(780) {
+				display: none;
+			}
 		}
 	}
 	&__title {
@@ -22,6 +29,9 @@
 		position: absolute;
 		top: -120px;
 		left: 160px;
+		@include r(1080) {
+			display: none;
+		}
 	}
 	&__tabs {
 		margin-bottom: -30px;
@@ -30,6 +40,10 @@
 		border-bottom: 2px solid $green-light;
 		z-index: 2;
 		position: relative;
+		@include r(780) {
+			margin-bottom: 30px;
+			width: fit-content;
+		}
 	}
 	&__tab {
 		color: $accent;
@@ -37,6 +51,9 @@
 		margin-right: 59px;
 		padding-bottom: 6px;
 		cursor: pointer;
+		@include r(780) {
+			margin-right: 25px;
+		}
 		&:last-child {
 			margin-right: 0px;
 		}
@@ -53,9 +70,12 @@
 				top: 100%;
 				content: "";
 				height: 2px;
-				background-color: $dark;
+				background-color: $accent;
 			}
 		}
+	}
+	&__swiper-container {
+		overflow: visible; 
 	}
 	&__block {
 		&--hidden {
@@ -67,6 +87,9 @@
 		display: flex;
 		justify-content: flex-end;
 		margin-bottom: 51px;
+		@include r(780) {
+			display: none;
+		}
 	}
 	&__swiper-left {
 		width: 30px;
@@ -78,6 +101,7 @@
 		align-items: center;
 		transition: 0.3s all;
 		cursor: pointer;
+		outline: none;
 		svg {
 			height: 14px;
 			width: 12px;
@@ -88,9 +112,6 @@
 		}
 		&:hover {
 			opacity: 0.7;
-		}
-		&--blocked {
-			border: 1px solid $accent;
 		}
 	}
 	&__swiper-right {
@@ -104,6 +125,7 @@
 		transition: 0.3s all;
 		margin-left: 5px;
 		cursor: pointer;
+		outline: none;
 		svg {
 			height: 14px;
 			width: 12px;
@@ -114,8 +136,12 @@
 		&:hover {
 			opacity: 0.7;
 		}
-		&--blocked {
+	}
+	&__btn {
+		&--disabled {
 			border: 1px solid $accent;
+			opacity: 0.7;
+			pointer-events: none;
 		}
 	}
 	&__article {
@@ -141,6 +167,9 @@
 		font-size: 18px;
 		line-height: 22px;
 		margin-bottom: 28px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis; 
 	}
 	&__article-content {
 		padding-top: 30px;
@@ -152,12 +181,19 @@
 		display: flex;
 		flex-wrap: wrap;
 		margin-bottom: 17px;
+		@include r(600) {
+			flex-wrap: wrap;
+		}
 	}
 	&__item {
 		display: flex;
 		align-items: center;
 		height: 16px;
 		width: 25%;
+		@include r(600) {
+			min-width: 100px;
+			margin-bottom: 16px;
+		}
 		svg {
 			width: 35px;
 			height: 24px;
@@ -172,6 +208,9 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@include r(600) {
+			display: block;
+		}
 	}
 	&__control-left {
 		height: 64px;
@@ -180,6 +219,9 @@
 		width: calc(50% - 1px);
 		font-size: 24px;
 		line-height: 29px;
+		@include r(600) {
+			width: 100%;
+		}
 		svg {
 			height: 18px;
 			width: 13px;
@@ -192,6 +234,9 @@
 		width: 2px;
 		height: 41px;
 		background-color: $green-light;
+		@include r(600) {
+			display: none;
+		}
 
 	}
 	&__control-right {
@@ -204,6 +249,11 @@
 		font-weight: 800;
 		color: $accent;
 		margin-top: 2px;
+		@include r(600) {
+			width: 100%;
+			border: 2px solid $accent;
+			border-radius: 8px;
+		}
 		span {
 			position: relative;
 			top: 1px;
@@ -214,6 +264,7 @@
 			margin-left: 20px;
 			position: relative;
 			top: 1px;
+			fill: $accent;
 		}
 		&:hover {
 			opacity: 0.7;

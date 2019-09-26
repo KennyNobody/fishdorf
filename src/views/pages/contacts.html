@@ -1,35 +1,87 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>New Page</title>
-        <meta name="theme-color" content="#c9e0e04d">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link rel="shortcut icon" href="../img/favicons/favicon.ico" type="image/x-icon">
-        <link rel="icon" sizes="16x16" href="../img/favicons/favicon-16x16.png" type="image/png">
-        <link rel="icon" sizes="32x32" href="../img/favicons/favicon-32x32.png" type="image/png">
-        <link rel="apple-touch-icon-precomposed" href="../img/favicons/apple-touch-icon-precomposed.png">
-        <link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="57x57" href="../img/favicons/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="../img/favicons/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="../img/favicons/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="../img/favicons/apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="../img/favicons/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="../img/favicons/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="../img/favicons/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="../img/favicons/apple-touch-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="167x167" href="../img/favicons/apple-touch-icon-167x167.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon-180x180.png">
-        <link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
-        <link rel="stylesheet" href="../styles/main.css">
-    </head>
-    <body>
-        @@include("../../blocks/modules/header/header.html")
-        <h1>New Page</h1>
-        @@include("../../blocks/modules/footer/footer.html")
-        <script src="../js/pageB.js"></script>
-        <script src="../js/vendor.js"></script>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Контакты</title>
+    <meta name="theme-color" content="#c9e0e04d">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="../img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="../img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="../img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body class="body">
+    @@include("../../blocks/modules/header/header.html")
+    <main class="main main--page">
+        @@include("../../blocks/modules/breadcrumbs/breadcrumbs.html")
+        <section class="contacts">
+        	<div class="container contacts__container">
+                <h3 class="title contacts__title">
+                    Контакты
+                </h3>
+               <div class="c-form">
+                   <div class="c-form__info">
+                       <div class="c-form__info-block">
+                           <strong>
+                               Наш адрес:
+                           </strong>
+                           <p>
+                               ул. Левобережная, 21, пос. Матросово, Калининградская обл., Россия, 238634
+                           </p>
+                       </div>
+                        <div class="c-form__info-block">
+                           <strong>
+                               Свяжитесь с нами:
+                           </strong>
+                           <p>
+                               <a href="tel:+74012521110">+7 (4012) 52-11-10</a>
+                           </p>
+                       </div>
+                       <p class="c-form__line">
+                           <strong>Офис:</strong> <a href="tel:695697">695-697</a>
+                       </p>
+                       <p class="c-form__line c-form__line--end">
+                           <strong>Viber:</strong> <a href="tel:+79633514100">+7 (963) 351-41-00</a>
+                       </p>
+                       @@include("../../blocks/modules/social/social.html")
+                   </div>
+                   <div class="c-form__form">
+                       <p class="c-form__form-title">
+                           Обратная связь
+                       </p>
+                       <input type="text" class="c-form__input c-form__input--50" placeholder="Ваше имя">
+                       <input type="text" class="c-form__input c-form__input--50" placeholder="Телефон">
+                       <input type="text" class="c-form__input" placeholder="E-mail">
+                       <textarea class="c-form__input c-form__input--textarea"></textarea>
+                       <button class="c-form__btn">
+                           Отправить
+                       </button>
+                   </div>
+               </div>
+               <div class="c-map">
+                   <p class="c-map__text">Карта загружается...</p>
+                   <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aba89f593670c172cced518b6eac85f603a25f0cefd18dffde3a8985b4f600184&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+               </div>
+            </div>
+        </section>
+    </main>
+    @@include("../../blocks/modules/footer/footer.html")
+    <script src="../js/vendor.js"></script>
+    <script src="../js/main.js"></script>
+</body>
 </html>

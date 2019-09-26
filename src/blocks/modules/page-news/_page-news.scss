@@ -1,0 +1,35 @@
+.news {
+	&__title {
+		margin-bottom: 52px;
+	}
+	&__articles {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: 80px;
+	}
+	&__article {
+		background: #FFFFFF;
+		box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+		position: static;
+		top: 0px;
+		width: calc(100% / 3 - 15px);
+		margin-bottom: 20px;
+		@include r(980) {
+			width: calc(50% - 10px);
+		}
+		@include r(600) {
+			width: 100%;
+		}
+	}
+	&__clear {
+		width: calc(100% / 3 - 15px);
+		display: block;
+		@include r(980) {
+			width: calc(50% - 10px);
+		}
+		@include r(600) {
+			width: 100%;
+		}
+	}
+}

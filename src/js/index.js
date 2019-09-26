@@ -2,6 +2,82 @@ import "./import/modules";
 import Swiper from 'swiper';
 
 (function() {
+	(function changeRoomTabs () {
+		const roomTabs = document.querySelectorAll('.front-room__tab');
+		const roomBlocks = document.querySelectorAll('.front-room__block');
+
+		if (roomTabs && roomBlocks) {
+			let activeTab;
+			for (let i = 0; i < roomTabs.length; i++) {
+				roomTabs[i].addEventListener('click', function() {
+					activeTab = i;
+					toggleLink(activeTab);
+					toggleTab(activeTab);
+					
+				});
+			}
+			
+			function toggleLink (activeTab) {
+				for(let n = 0; n < roomTabs.length; n++) {
+					roomTabs[n].classList.remove('front-room__tab--active');
+				}
+				roomTabs[activeTab].classList.add('front-room__tab--active');
+			}
+
+			function toggleTab(activeTab) {
+				for (let z = 0; z < roomBlocks.length; z++) {
+					roomBlocks[z].classList.add('front-room__block--hidden');
+				}
+				roomBlocks[activeTab].classList.remove('front-room__block--hidden');
+			}
+		}
+	})();
+
+	(function initRoomSliders() {
+		const roomSliders = document.querySelectorAll('.front-room__swiper-container');
+
+		if (roomSliders) {
+			for (let i = 0; i < roomSliders.length; i++) {
+				new Swiper (roomSliders[i], {
+					loop: false,
+					slidesPerView: 'auto',
+					spaceBetween: 20,
+					navigation: {
+						nextEl: '.front-room__swiper-right',
+						prevEl: '.front-room__swiper-left',
+						disabledClass: 'front-room__btn--disabled'
+					},
+				});
+			}
+		}
+
+	})();
+
+	(function initFeaturesSliders() {
+		const partySwiper = new Swiper ('.front-features__slider', {
+			loop: false,
+			slidesPerView: 1,
+			spaceBetween: 20,
+			direction: 'horizontal',
+			navigation: {
+				nextEl: '.front-news__next',
+				prevEl: '.front-news__prev',
+				disabledClass: 'front-news__btn--disabled'
+			},
+			breakpoints: {
+				1080: {
+					direction: 'vertical',
+				}
+			},
+			pagination: {
+				el: '.front-features__pagination',
+				renderBullet: function (index, className) {
+					return '<span class="' + className + '">0' + (index + 1) + '</span>';
+				}
+			}
+		});
+	})();
+
 	(function initNewsSlider() {
 		const partySwiper = new Swiper ('.front-party__swiper-container', {
 			loop: false,
@@ -60,65 +136,96 @@ import Swiper from 'swiper';
 		});
 	})();
 
-	(function changeRoomTabs () {
-		const roomTabs = document.querySelectorAll('.front-room__tab');
-		const roomBlocks = document.querySelectorAll('.front-room__block');
+	(function initRoomsSliders() {
+		const roomSliders = document.querySelectorAll('.hotels__column-slider');
 
-		if (roomTabs && roomBlocks) {
-			let activeTab;
-			for (let i = 0; i < roomTabs.length; i++) {
-				roomTabs[i].addEventListener('click', function() {
-					activeTab = i;
-					toggleLink(activeTab);
-					toggleTab(activeTab);
-					
-				});
-			}
-			
-			function toggleLink (activeTab) {
-				for(let n = 0; n < roomTabs.length; n++) {
-					roomTabs[n].classList.remove('front-room__tab--active');
-				}
-				roomTabs[activeTab].classList.add('front-room__tab--active');
-			}
-
-			function toggleTab(activeTab) {
-				for (let z = 0; z < roomBlocks.length; z++) {
-					roomBlocks[z].classList.add('front-room__block--hidden');
-				}
-				roomBlocks[activeTab].classList.remove('front-room__block--hidden');
-			}
-		}
-	})();
-
-	(function initRoomSliders() {
-		const roomSliders = document.querySelectorAll('.front-room__swiper-container');
-
-		for (let i = 0; i < roomSliders.length; i++) {
-			new Swiper (roomSliders[i], {
-				loop: false,
-				slidesPerView: 3,
-				spaceBetween: 20,
-				navigation: {
-					nextEl: '.front-news__next',
-					prevEl: '.front-news__prev',
-					disabledClass: 'front-news__btn--disabled'
-				},
-				breakpoints: {
-					500: {
-						slidesPerView: 1,
-						spaceBetween: 0
-					},
-					480: {
-						slidesPerView: 2,
-						spaceBetween: 20
-					},
-					900: {
+		if (roomSliders) {
+			for (let i = 0; i < roomSliders.length; i++) {
+				(function() {
+					let galleryThumbs = new Swiper(roomSliders[i].querySelector('.hotels__gallery-thumbs'), {
+						spaceBetween: 24,
 						slidesPerView: 3,
-						spaceBetween: 20
-					}
-				}
-			});
+						watchSlidesVisibility: true,
+						watchSlidesProgress: true,
+						direction: 'vertical',
+						touchRatio: 0.2,
+						loop: true,
+						slideToClickedSlide: true,
+						centeredSlides: true,
+					});
+					let galleryTop = new Swiper(roomSliders[i].querySelector('.hotels__gallery-top'), {
+						spaceBetween: 10,
+						slidesPerView: 1,
+						direction: 'vertical',
+						slideToClickedSlide: true,
+						loop: true,
+						effect: 'fade',
+						navigation: {
+							nextEl: '.swiper-button-next',
+							prevEl: '.swiper-button-prev',
+						}
+					});
+					galleryTop.controller.control = galleryThumbs;
+					galleryThumbs.controller.control = galleryTop;
+				})();
+			}
 		}
+
 	})();
+
+	(function initSingleNewsSlider() {
+		const roomSliders = document.querySelectorAll('.s-news__slider');
+
+		if (roomSliders) {
+			for (let i = 0; i < roomSliders.length; i++) {
+				(function() {
+					let lengthSlider = roomSliders[i].querySelectorAll('.s-news__slide-top').length;
+					let loopStatus;
+					let paginationInfo;
+
+					if (lengthSlider > 1 && lengthSlider < 5) {
+						loopStatus = false;
+						paginationInfo = {
+							el: '.swiper-pagination',
+						};
+						roomSliders[i].querySelector('.s-news__slider-thumb').classList.add('s-news__slider-thumb--hidden')
+					} else if (lengthSlider > 4) {
+						loopStatus = true;
+						paginationInfo = false;
+					} else {
+						return false
+					}
+
+					if (lengthSlider > 1) {
+						let galleryThumbs = new Swiper(roomSliders[i].querySelector('.s-news__slider-thumb'), {
+							spaceBetween: 20,
+							slidesPerView: 4,
+							watchSlidesVisibility: true,
+							watchSlidesProgress: true,
+							loopedSlides: 5,
+							slideToClickedSlide: true,
+							freeMode: true,
+							loop: loopStatus,
+						});
+						let galleryTop = new Swiper(roomSliders[i].querySelector('.s-news__slider-top'), {
+							slidesPerView: 1,
+							slideToClickedSlide: true,
+							loop: loopStatus,
+							loopedSlides: 5,
+							navigation: {
+								nextEl: '.swiper-button-next',
+								prevEl: '.swiper-button-prev',
+							},
+							pagination: paginationInfo,
+						});
+						galleryTop.controller.control = galleryThumbs;
+						galleryThumbs.controller.control = galleryTop;
+					}
+
+				})();
+			}
+		}
+
+	})();
+
 })();

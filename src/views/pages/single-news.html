@@ -1,35 +1,136 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>New Page</title>
-        <meta name="theme-color" content="#c9e0e04d">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link rel="shortcut icon" href="../img/favicons/favicon.ico" type="image/x-icon">
-        <link rel="icon" sizes="16x16" href="../img/favicons/favicon-16x16.png" type="image/png">
-        <link rel="icon" sizes="32x32" href="../img/favicons/favicon-32x32.png" type="image/png">
-        <link rel="apple-touch-icon-precomposed" href="../img/favicons/apple-touch-icon-precomposed.png">
-        <link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="57x57" href="../img/favicons/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="../img/favicons/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="../img/favicons/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="../img/favicons/apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="../img/favicons/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="../img/favicons/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="../img/favicons/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="../img/favicons/apple-touch-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="167x167" href="../img/favicons/apple-touch-icon-167x167.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon-180x180.png">
-        <link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
-        <link rel="stylesheet" href="../styles/main.css">
-    </head>
-    <body>
-        @@include("../../blocks/modules/header/header.html")
-        <h1>New Page</h1>
-        @@include("../../blocks/modules/footer/footer.html")
-        <script src="../js/pageB.js"></script>
-        <script src="../js/vendor.js"></script>
-    </body>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Одна новость</title>
+	<meta name="theme-color" content="#c9e0e04d">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="shortcut icon" href="../img/favicons/favicon.ico" type="image/x-icon">
+	<link rel="icon" sizes="16x16" href="../img/favicons/favicon-16x16.png" type="image/png">
+	<link rel="icon" sizes="32x32" href="../img/favicons/favicon-32x32.png" type="image/png">
+	<link rel="apple-touch-icon-precomposed" href="../img/favicons/apple-touch-icon-precomposed.png">
+	<link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="../img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../img/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../img/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../img/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../img/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../img/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../img/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../img/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="../img/favicons/apple-touch-icon-167x167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
+	<link rel="stylesheet" href="../styles/main.css">
+</head>
+<body class="body">
+	@@include("../../blocks/modules/header/header.html")
+	<main class="main main--page">
+		@@include("../../blocks/modules/breadcrumbs/breadcrumbs.html")
+		<section class="s-news">
+			<div class="container">
+				<h3 class="title s-news__title">
+					Новости
+				</h3>
+				<time class="s-news__time">
+					12.09.2019
+				</time>
+				<div class="s-news__content">
+					<div class="s-news__text">
+						<p>
+							Ездили в отпуск. Пытались отдыхать. Было сложно.
+						</p>
+						<br>
+						<p>
+							Нормальные люди покупают отель с пляжем, чинными завтраками, пляжным баром, и с утра до ночи чилят в лаунжах.
+						</p>
+						<br>
+						<p>
+							Человек, вырвавшийся из Свалева хочет все и сразу. Еду, вино, культурку, купацо, и чтобы побольше людей вокруг. 
+							Половина пляжей отпала из-за культурки (античные развалины и у нас в Сконе есть, викинги наразваливали). Хотелось архитектуры, оперы и интересно одетых людей. Все сошлось на Италии, включая авиабилет по цене электрички до Копенгагена. Девки в озере купались, их надежды оправдались - это, если в двух словах, не считая покоцаной на серпантине машины, украденного в Венеции кошелька и небольшого криминального приключения по поводу неуплаты налогов (не нами, но кого это волнует).
+						</p>
+						<br>
+						<p>
+							Бродили, смотрели во все глаза, выпивали уже с утра, ели разное, купались в озере Гарда и в Адриатическом море. Танцевали танго на ночной милонге в парке. Рассекали на моторке и на вапоретто. Жили на горе с орлами, как отец Федор, на лодке в марине, как Федор Конюхов, и на острове Лидо, как Федор Шаляпин.
+						</p>
+						<br>
+						<p>
+							Слушали великую Нетребко в Трубадуре на оперном фестивале в Веронской античной арене, были дома у Энцо Феррари в Модене, насчитали не менее трех совершенно нераскрученных падающих башен в разных городках. Обсуждали Швецию с итальянцами, и Россию с американцами. И все это за неполные две недели. Теперь нужен еще один отпуск, чтобы восстановиться. Мне в Москву скоро.
+						</p>
+					</div>
+					<div class="s-news__items">
+						<div class="s-news__slider">
+							<div class="s-news__slider-content">
+								<div class="swiper-container s-news__slider-top">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide s-news__slide-top">
+											<img src="http://placehold.it/1000x600" alt="Иллюстрация">
+										</div>
+										<div class="swiper-slide s-news__slide-top">
+											<img src="http://placehold.it/1000x600" alt="Иллюстрация">
+										</div>
+										<div class="swiper-slide s-news__slide-top">
+											<img src="http://placehold.it/1000x600" alt="Иллюстрация">
+										</div>
+										<div class="swiper-slide s-news__slide-top">
+											<img src="http://placehold.it/1000x600" alt="Иллюстрация">
+										</div>
+										<div class="swiper-slide s-news__slide-top">
+											<img src="http://placehold.it/1000x600" alt="Иллюстрация">
+										</div>
+										<div class="swiper-slide s-news__slide-top">
+											<img src="http://placehold.it/1000x600" alt="Иллюстрация">
+										</div>
+										<div class="swiper-slide s-news__slide-top">
+											<img src="http://placehold.it/1000x600" alt="Иллюстрация">
+										</div>
+										<div class="swiper-slide s-news__slide-top">
+											<img src="http://placehold.it/1000x600" alt="Иллюстрация">
+										</div>
+									</div>
+									<div class="swiper-button-next swiper-button-white"></div>
+									<div class="swiper-button-prev swiper-button-white"></div>
+									<div class="swiper-pagination"></div>
+								</div>
+								<div class="swiper-container s-news__slider-thumb">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide s-news__slide-thumb">
+											<img src="http://placehold.it/1000x600" alt="Иллюстрация">
+										</div>
+										<div class="swiper-slide s-news__slide-thumb">
+											<img src="http://placehold.it/1000x600" alt="Иллюстрация">
+										</div>
+										<div class="swiper-slide s-news__slide-thumb">
+											<img src="http://placehold.it/1000x600" alt="Иллюстрация">
+										</div>
+										<div class="swiper-slide s-news__slide-thumb">
+											<img src="http://placehold.it/1000x600" alt="Иллюстрация">
+										</div>
+										<div class="swiper-slide s-news__slide-thumb">
+											<img src="http://placehold.it/1000x600" alt="Иллюстрация">
+										</div>
+										<div class="swiper-slide s-news__slide-thumb">
+											<img src="http://placehold.it/1000x600" alt="Иллюстрация">
+										</div>
+										<div class="swiper-slide s-news__slide-thumb">
+											<img src="http://placehold.it/1000x600" alt="Иллюстрация">
+										</div>
+										<div class="swiper-slide s-news__slide-thumb">
+											<img src="http://placehold.it/1000x600" alt="Иллюстрация">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include("../../blocks/modules/footer/footer.html")
+	<script src="../js/vendor.js"></script>
+	<script src="../js/main.js"></script>
+</body>
 </html>

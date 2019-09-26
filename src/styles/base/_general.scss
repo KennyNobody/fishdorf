@@ -22,6 +22,14 @@ svg, a {
     }
 }
 
+.main {
+    overflow: hidden;
+    &--page {
+        padding-top: 64px;
+        padding-bottom: 80px;
+    }
+}
+
 .container {
     width: 1070px;
     padding-left: 15px;

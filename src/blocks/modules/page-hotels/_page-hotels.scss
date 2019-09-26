@@ -1,0 +1,161 @@
+.hotels {
+	&__article {
+		position: relative;
+		height: 404px;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 80px;
+		&:nth-child(4n+1) {
+			.hotels__column-slider {
+				&:before {
+					background-color: $green-light;
+				}
+			}
+			.hotels__link {
+				background-color: $dark;
+			}
+		}
+		&:nth-child(4n+2) {
+			.hotels__column-slider {
+				order: -1;
+				&:before {
+					background-color: $accent;
+				}
+			}
+			.hotels__link {
+				background-color: $accent;
+			}
+		}
+		&:nth-child(4n+3) {
+			.hotels__column-slider {
+				&:before {
+					background-color: $red;
+				}
+			}
+			.hotels__link {
+				background-color: $red;
+			}
+		}
+		&:nth-child(4n) {
+			.hotels__column-slider {
+				order: -1;
+				&:before {
+					background-color: $dark;
+				}
+			}
+			.hotels__link {
+				background-color: $dark;
+			}
+		}
+	}
+	&__column-text {
+		width: calc(100% / 12 * 4 - 10px);
+		padding-top: 10px;
+	}
+	&__column-slider {
+		position: relative;
+		width: calc(100% / 12 * 8 - 10px);
+		display: flex;
+		&:before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			left: 0px;
+			top: 0px;
+			bottom: 0px;
+			width: 66%;
+			background-color: red;
+		}
+
+	}
+	&__gallery-thumbs {
+		padding-top: 42px;
+		padding-bottom: 42px;
+		padding-right: 20px;
+		padding-left: 29px;
+		flex-shrink: 0;
+		.swiper-slide {
+			transition: 0.3s all;
+			opacity: 0.4;
+		}
+		.swiper-slide-active {
+			opacity: 1;
+		}
+	}
+	&__gallery-thumb {
+		width: 128px;
+		overflow: hidden;
+		height: 88px;
+		img {
+			object-fit: cover;
+			height: 100%;
+			width: 100%;
+		}
+	}
+	&__gallery-top {
+		flex-grow: 1;
+		padding-top: 32px;
+		padding-bottom: 32px;
+		.swiper-slide {
+			transition: 0.3s all;
+			opacity: 0;
+		}
+		.swiper-slide-active {
+			opacity: 1;
+		}
+	}
+	&__gallery-top-slider {
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			display: block;
+		}
+	}
+	&__title {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		margin-bottom: 30px;
+	}
+	&__text {
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 20px;
+		margin-bottom: 17px;
+	}
+	&__price {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 22px;
+		margin-bottom: 40px;
+		strong {
+			font-weight: 600;
+			font-size: 30px;
+			line-height: 37px;
+		}
+	}
+	&__link {
+		border-radius: 50px;
+		color: $light;
+		text-decoration: none;
+		width: 204px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 800;
+		font-size: 16px;
+		line-height: 20px;
+		svg {
+			height: 14px;
+			width: 10px;
+			display: block;
+			margin-left: 10px;
+			fill: $light;
+		}
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}

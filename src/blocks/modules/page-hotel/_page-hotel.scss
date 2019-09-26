@@ -1,0 +1,159 @@
+.hotel {
+	&__title {
+		margin-bottom: 38px;
+	}
+	&__articles {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__article {
+		border-radius: 8px;
+		overflow: hidden; 
+		box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.1);
+		position: relative;
+		width: calc(50% - 10px);
+		margin-bottom: 20px;
+		@include r(580) {
+			width: 100%;
+		}
+	}
+	&__thumb {
+		height: 300px;
+		width: 100%;
+		display: block;
+		img {
+			display: block;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__content {
+		padding-top: 23px;
+		padding-bottom: 11px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	&__name {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 22px;
+		margin-bottom: 24px;
+	}
+	&__text {
+		margin-bottom: 17px;
+	}
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		min-height: 30px;
+		margin-bottom: 15px;
+	}
+	&__item {
+		margin-right: 39px;
+		display: flex;
+		align-items: center;
+		flex-shrink: 0;
+		margin-bottom: 5px;
+		svg {
+			height: 30px;
+			width: 40px;
+			margin-right: 15px;
+			fill: $accent;
+		}
+		span {
+
+		}
+	}
+	&__control {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-top: 2px solid $green-light;
+		padding-top: 6px;
+		padding-bottom: 6px;
+		@include r(1080) {
+			display: block;
+		}
+	}
+	&__separator {
+		height: 41px;
+		width: 2px;
+		background-color: $green-light;
+		@include r(1080) {
+			display: none;
+		}
+	}
+	&__price {
+		height: 41px;
+		width: calc(100% / 3 - 2px);
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 29px;
+		align-items: center;
+		display: flex;
+		@include r(1080) {
+			width: 100%;
+			justify-content: center;
+			margin-bottom: 10px;
+		}
+		svg {
+			fill: $green-light;
+			width: 15px;
+			height: 20px;
+			margin-right: 17px;
+		}
+	}
+	&__buy {
+		height: 41px;
+		width: calc(100% / 3 - 2px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 800;
+		font-size: 16px;
+		line-height: 20px;
+		text-decoration: none;
+		color: $accent;
+		@include r(1080) {
+			width: 100%;
+			border: 2px solid $accent;
+			color: $light;
+			background-color: $accent;
+			border-radius: 8px;
+			margin-bottom: 10px;
+		}
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	&__more {
+		height: 41px;
+		width: calc(100% / 3 - 2px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 800;
+		font-size: 16px;
+		line-height: 20px;
+		text-decoration: none;
+		color: $accent;
+		@include r(1080) {
+			width: 100%;
+			border: 2px solid $accent;
+			color: $accent;
+			background-color: $light;
+			border-radius: 8px;
+		}
+		&:hover {
+			opacity: 0.7;
+		}
+		svg {
+			fill: $accent;
+			height: 19px;
+			width: 13px;
+			margin-left: 14px;
+		}
+	}
+}

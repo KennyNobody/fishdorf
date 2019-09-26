@@ -1,0 +1,151 @@
+.contacts {
+	&__title {
+		margin-bottom: 29px;
+	}
+}
+
+.c-form {
+	margin-bottom: 44px;
+	padding-left: 194px;
+	position: relative;
+	@include r(1080) {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	&__info {
+		background-color: $light;
+		box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+		position: absolute;
+		top: 79px;
+		width: 422px;
+		padding-top: 53px;
+		padding-left: 38px;
+		padding-right: 38px;
+		padding-bottom: 47px;
+		left: -46px;
+		@include r(1080) {
+			position: static;
+			width: 100%;
+			margin-bottom: 44px;
+		}
+		@include r(680) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	&__info-block {
+		display: block;
+		margin-bottom: 34px;
+		strong {
+			color: $accent;
+			font-weight: 600;
+		}
+		a {
+			color: $dark;
+			text-decoration: none;
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+	&__line {
+		strong {
+			color: $accent;
+		}
+		a {
+			color: $dark;
+			text-decoration: none;
+			&:hover {
+				color: $accent;
+			}
+		}
+		&--end {
+			margin-bottom: 34px;
+		}
+	}
+	&__form {
+		background-color: $dark;
+		color: $light;
+		padding-right: 86px;
+		padding-left: 248px;
+		padding-top: 32px;
+		padding-bottom: 40px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		@include r(1080) {
+			padding-left: 30px;
+			padding-right: 30px;
+			width: 100%;
+		}
+		@include r(680) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	&__form-title {
+		margin-bottom: 22px;
+		font-size: 20px;
+		line-height: 25px;
+		font-family: $title-font;
+		font-weight: 900;
+		width: 100%;
+	}
+	&__input {
+		box-sizing: border-box;
+		outline: none;
+		border: none;
+		width: 100%;
+		margin-bottom: 20px;
+		background-color: #4B6567;
+		border-radius: 4px;
+		height: 44px;
+		font-size: 16px;
+		line-height: 20px;
+		padding-left: 17px;
+		padding-right: 17px;
+		color: $light;
+		&--50 {
+			width: calc(50% - 10px);
+			@include r(680) {
+				width: 100%;
+			}
+		}
+		&--textarea {
+			min-height: 178px;
+			resize: none;
+			margin-bottom: 20px;
+		}
+		&::placeholder {
+			color: $light;
+		}
+	}
+	&__btn {
+		color: $light;
+		background-color: $red;
+		border-radius: 4px;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 22px;
+		border: none;
+		width: 156px;
+		height: 40px;
+		cursor: pointer;
+		transition: 0.3s all;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
+
+.c-map {
+	height: 450px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__text {
+		z-index: -1;
+		position: absolute;
+	}
+}

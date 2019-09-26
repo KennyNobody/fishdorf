@@ -1,18 +1,49 @@
 .front-features {
+	overflow: hidden; 
 	&__slider {
-		overflow: visible; 
+		overflow: visible;
+		height: 765px;
+		@include r(780) {
+			height: auto;
+		}
+		.swiper-slide {
+			opacity: 0;
+		}
+		.swiper-slide-active {
+			opacity: 1;
+		}
 	}
 	&__slide {
 		padding-top: 139px;
 		display: flex;
+		height: 556px;
+		transition: 0.3s all;
+		@include r(780) {
+			height: auto;
+			display: block;
+			padding-top: 90px;
+		}
 	}
 	&__slide-left {
 		width: calc(100% / 12 * 5);
 		padding-right: 73px;
+		@include r(1080) {
+			padding-right: 15px;
+		}
+		@include r(780) {
+			width: 100%;
+			max-width: 500px;
+		}
 	}
 	&__slide-right {
 		width: calc(100% / 12 * 7);
 		padding-right: 73px;
+		@include r(1080) {
+			padding-right: 0px;
+		}
+		@include r(780) {
+			display: none;
+		}
 	}
 	&__title {
 		position: relative;
@@ -22,6 +53,9 @@
 		position: absolute;
 		left: -120px;
 		top: -127px;
+		@include r(1080) {
+			display: none;
+		}
 	}
 	&__thumb {
 		width: 100%;
@@ -30,6 +64,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			display: block;
 		}
 	}
 	&__content {
@@ -56,6 +91,50 @@
 		}
 		&:hover {
 			opacity: 0.7;
+		}
+	}
+	&__pagination {
+		position: absolute;
+		right: 0px !important;
+		top: 139px !important;
+		width: 107px;
+		transform: none !important;
+		z-index: 2;
+		@include r(1080) {
+			display: none;
+		}
+		.swiper-pagination-bullet {
+			margin: 0 !important;
+			display: flex !important;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 22px;
+			opacity: 1 !important;
+			height: 40px !important;
+			width: 107px !important;
+			align-items: center;
+			justify-content: flex-end;
+			background: none !important;
+			position: relative;
+			&:before {
+				max-width: 0px;
+				height: 3px;
+				width: 57px;
+				background-color: $dark;
+				content: "";
+				position: absolute;
+				left: 0px;
+				transition: 0.3s all;
+				top: calc(50% - 1px);	
+			}
+		}
+		.swiper-pagination-bullet-active {
+			font-weight: bold;
+			font-size: 32px;
+			line-height: 39px;
+			&:before {
+				max-width: 57px;	
+			}
 		}
 	}
 }

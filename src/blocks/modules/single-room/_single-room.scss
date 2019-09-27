@@ -1,0 +1,193 @@
+.apart {
+	&__title {
+		margin-bottom: 40px;
+	}
+	&__thumbs {
+		padding-left: 88px;
+		padding-right: 88px;
+		padding-bottom: 29px;
+		position: relative;
+		@include r(1080) {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+		@include r(600) {
+			padding: 0px;
+		}
+		&:after {
+			content: "";
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			position: absolute;
+			z-index: -1;
+			background-color: $dark;
+			height: 50%;
+			@include r(600) {
+				display: none;
+			}
+		}
+	}
+	&__top-slider {
+		margin-bottom: 20px;
+		overflow: visible;
+		.swiper-slide-active {
+			opacity: 1;
+		}
+		.swiper-button-prev {
+			color: $dark;
+			outline: none;
+			left: -80px;
+			@include r(1080) {
+				left: 10px;
+				color: $light;
+			}
+		}
+		.swiper-button-next {
+			color: $dark;
+			outline: none;
+			right: -80px;
+			@include r(1080) {
+				right: 10px;
+				color: $light;
+			}
+		}
+		.swiper-pagination-bullet {
+			background-color: $light;
+		}
+		.swiper-pagination-bullet-active {
+			background-color: $light;
+		}
+		.swiper-pagination {
+			bottom: -30px;
+		}
+	}
+	&__top-slide {
+		height: 575px;
+		background-color: red;
+		opacity: 0;
+		transition: 0.3s all;
+		user-select: none;
+		@include r(1080) {
+			height: auto;
+		}
+		img {
+			display: block;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__thumb-slider {
+		@include r(600) {
+			display: none;
+		}
+		&--hidden {
+			display: none;
+		}
+	}
+	&__thumb-slide {
+		background-color: green;
+		height: 99px;
+		@include r(1080) {
+			height: 130px;
+		}
+		@include r(780) {
+			height: 90px;
+		}
+		img {
+			display: block;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__items {
+		flex-wrap: wrap;
+		justify-content: center;
+		padding-top: 60px;
+		padding-bottom: 50px;
+		display: flex;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-right: 60px;
+		margin-bottom: 30px;
+		@include r(600) {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+		svg {
+			height: 40px;
+			width: 58px;
+			margin-right: 20px;
+		}
+		span {
+			font-size: 24px;
+			line-height: 29px;
+		}
+	}
+	&__text {
+		padding-bottom: 64px;
+		border-bottom: 2px solid $green-light;
+	}
+	&__control {
+		padding-top: 64px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include r(600) {
+			display: block;
+			padding-top: 40px;
+			text-align: center;
+		}
+	}
+	&__price {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 22px;
+		@include r(600) {
+			margin-bottom: 20px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		strong {
+			font-weight: 600;
+			font-size: 30px;
+			line-height: 37px;
+		}
+	}
+	&__btn {
+		width: 274px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $dark;
+		color: $light;
+		border-radius: 50px;
+		text-align: center;
+		text-decoration: none;
+		font-weight: 800;
+		font-size: 16px;
+		line-height: 20px;
+		@include r(600) {
+			margin-bottom: 20px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		span {
+
+		}
+		svg {
+			margin-left: 8px;
+			fill: $light;
+			height: 18px;
+			width: 12px;
+		}
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}

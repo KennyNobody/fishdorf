@@ -1,35 +1,181 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>New Page</title>
-        <meta name="theme-color" content="#c9e0e04d">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link rel="shortcut icon" href="../img/favicons/favicon.ico" type="image/x-icon">
-        <link rel="icon" sizes="16x16" href="../img/favicons/favicon-16x16.png" type="image/png">
-        <link rel="icon" sizes="32x32" href="../img/favicons/favicon-32x32.png" type="image/png">
-        <link rel="apple-touch-icon-precomposed" href="../img/favicons/apple-touch-icon-precomposed.png">
-        <link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="57x57" href="../img/favicons/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="../img/favicons/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="../img/favicons/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="../img/favicons/apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="../img/favicons/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="../img/favicons/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="../img/favicons/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="../img/favicons/apple-touch-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="167x167" href="../img/favicons/apple-touch-icon-167x167.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon-180x180.png">
-        <link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
-        <link rel="stylesheet" href="../styles/main.css">
-    </head>
-    <body>
-        @@include("../../blocks/modules/header/header.html")
-        <h1>New Page</h1>
-        @@include("../../blocks/modules/footer/footer.html")
-        <script src="../js/pageB.js"></script>
-        <script src="../js/vendor.js"></script>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Апартаменты</title>
+    <meta name="theme-color" content="#c9e0e04d">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="../img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="../img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="../img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body class="body">
+    @@include("../../blocks/modules/header/header.html")
+    <main class="main main--page">
+        @@include("../../blocks/modules/breadcrumbs/breadcrumbs.html")
+        <section class="apart">
+            <div class="container container__apart">
+                <h3 class="title apart__title">
+                    Эллинг
+                </h3>
+                <div class="apart__thumbs">
+                    <div class="swiper-container apart__top-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide apart__top-slide">
+                                <img src="http://placehold.it/1000x600" alt="Иллюстрация">
+                            </div>
+                            <div class="swiper-slide apart__top-slide">
+                                <img src="http://placehold.it/1000x600" alt="Иллюстрация">
+                            </div>
+                            <div class="swiper-slide apart__top-slide">
+                                <img src="http://placehold.it/1000x600" alt="Иллюстрация">
+                            </div>
+                            <div class="swiper-slide apart__top-slide">
+                                <img src="http://placehold.it/1000x600" alt="Иллюстрация">
+                            </div>
+                            <div class="swiper-slide apart__top-slide">
+                                <img src="http://placehold.it/1000x600" alt="Иллюстрация">
+                            </div>
+                        </div>
+                        <div class="swiper-button-next swiper-button-white"></div>
+                        <div class="swiper-button-prev swiper-button-white"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="swiper-container apart__thumb-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide apart__thumb-slide">
+                                <img src="http://placehold.it/1000x600" alt="Иллюстрация">
+                            </div>
+                            <div class="swiper-slide apart__thumb-slide">
+                                <img src="http://placehold.it/1000x600" alt="Иллюстрация">
+                            </div>
+                            <div class="swiper-slide apart__thumb-slide">
+                                <img src="http://placehold.it/1000x600" alt="Иллюстрация">
+                            </div>
+                            <div class="swiper-slide apart__thumb-slide">
+                                <img src="http://placehold.it/1000x600" alt="Иллюстрация">
+                            </div>
+                            <div class="swiper-slide apart__thumb-slide">
+                                <img src="http://placehold.it/1000x600" alt="Иллюстрация">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="apart__items">
+                    <div class="apart__item">
+                        <svg class="icon-svg">
+                            <use xlink:href="./img/sprites/sprite.svg#icon-persons"></use>
+                        </svg>
+                        <span>
+                            4
+                        </span>
+                    </div>
+                    <div class="apart__item">
+                        <svg class="icon-svg">
+                            <use xlink:href="./img/sprites/sprite.svg#icon-bed"></use>
+                        </svg>
+                        <span>
+                            2
+                        </span>
+                    </div>
+                    <div class="apart__item">
+                        <svg class="icon-svg">
+                            <use xlink:href="./img/sprites/sprite.svg#icon-persons"></use>
+                        </svg>
+                        <span>
+                            4
+                        </span>
+                    </div>
+                    <div class="apart__item">
+                        <svg class="icon-svg">
+                            <use xlink:href="./img/sprites/sprite.svg#icon-bed"></use>
+                        </svg>
+                        <span>
+                            2
+                        </span>
+                    </div>
+                </div>
+                <div class="apart__text text">
+                    <p>
+                        У нас в четверг был Национальный день Швеции, он же День шведского флага. Это как в России - никто не работает, как праздновать - непонятно, на всякий случай все крепко напиваются и веселятся.
+                        Историй возникновения этого замечательного праздника только Хенрик знает две.
+                    </p>
+                    <br>
+                    <p>
+                        Одна что-то про рисдаг и про конституцию. Вторая -  по драматизму не уступающая Играм Престолов. Густав Ваза как бы смешно не звучало его фамилия, один из самых популярных правителей. Он собрал псевдосоюзников на пир, потом закрыл двери и перерезал всех до единого. А через пару лет взошел на царство и благополучно реформировал Швецию, сделав ее сильным независимым государством.
+                    </p>
+                    <br>
+                    <p>
+                        Мне вообще кажется, национальные праздники всем странам, где есть проблемы с климатом, надо по возможности делать летом, конечно. Чтобы айнанэ зря не пропало. А к чему приурочить, всегда можно найти.
+                    </p>
+                    <br>
+                    <p>
+                        Так вот про соседей. Давние читатели, возможно, помнят мой пост про мусор, а если нет, вот в двух словах вся история. За мусором большая красивая машина с сексуальными мачо в униформе приезжает раз в две недели. Если ты вдруг забыл об этом, и твой контейнер не стоит перед домом, готовый к захвату огромной клешней мусоровоза,  у тебя примерно такие варианты:
+                    </p>
+                    <br>
+                    <ul>
+                        <li>
+                            1.  Две следующие недели не производить никаких отходов. 
+                        </li>
+                        <li>
+                            2. Подкидывать мусор соседям под покровом ночи.
+                        </li>
+                    </ul>
+                    <br>
+                    <p>
+                        Оба так себе, поэтому все загодя, вечером в среду выставляют контейнеры.
+                        В среду перед Национальным днем никто контейнеры не выставил. Это прямо против национальной идеи Швеции  - работать в выходной. Тем более - в такой, который летом. Я на всякий случай уточнила у Хенрика - будем? Он улыбнулся, и сказал, что это за гранью возможного, а в чудеса он не верит.
+                    </p>
+                    <br>
+                    <p>
+                        И вот - великий день. Мы долго спим, расслабленно завтракаем. В доме очень жарко, и мы сидим полуодетые с горячим крепким кофе в саду. И вдруг - звук. Звук, который не спутаешь ни с чем. Скрежет железного ковша и шорох мусора. Удаляющийся звук. 
+                    </p>
+                    <br>
+                    <p>
+                        Я мобилизовалась быстрее (сказывается российская закалка). Пристроила кофе в траву, оглядела себя - ок, короткий, шелковый, но все-таки халат. Тапки где-то в траве. Не надо тапок. Тремя прыжками пересекла участок, вихрем промчалась по дому, выскочила к проезжей части. Мусоровоз плавно отъезжал от соседей. Я схватила контейнер и побежала за мусоровозом, отчаянно толкая двухнедельные следы нашего взаимодействия с окружающей действительностью перед собой.  Вообще контейнер, конечно, не предназначен для такого экстрима, но, слава шведскому производителю, он выдержал. Я была замечена, машина притормозила, мачо белозубо улыбнулся их кабины и осуществил необходимую манипуляцию. Пустой контейнер опустился к моим босым грязным ногам.
+                    </p>
+                    <br>
+                    <p>
+                        Когда я выдохнула, я очень смеялась. Смеялась, стоя посреди улицы в халате, с мусорным баком. Потому что возле каждого дома стояли такие же не верящие в чудо, но верящие в национальный характер люди. В таком же безобразном виде. Дефиле семейных трусов, разношенных ночнушек, всклокоченных волос. Никто из них и на секунду не подумал, что мусоровоз может приехать в праздничный день. 
+                    </p>
+                    <br>
+                    <p>
+                        Я Хенрик меня зауважал еще больше после этого. Коня на скаку, шутка ли. <a href="https://t.me/yapoekhala/37">https://t.me/yapoekhala/37</a>
+                    </p>
+                </div>
+                <div class="apart__control">
+                    <p class="apart__price">
+                        от <strong>3500</strong>р. за сутки
+                    </p>
+                    <a href="#" class="apart__btn">
+                        <span>Забронировать</span>
+                        <svg class="icon-svg">
+                            <use xlink:href="./img/sprites/sprite.svg#icon-arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include("../../blocks/modules/footer/footer.html")
+    <script src="../js/vendor.js"></script>
+    <script src="../js/main.js"></script>
+</body>
 </html>

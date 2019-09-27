@@ -14,6 +14,12 @@
 		padding-top: 100px;
 		padding-bottom: 100px;
 		position: relative;
+		@include r(900) {
+			padding-bottom: 60px;
+		}
+		@include r(680) {
+			padding-bottom: 0px;
+		}
 	}
 	&__title {
 		margin-bottom: 25px;

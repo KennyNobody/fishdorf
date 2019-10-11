@@ -63,3 +63,43 @@ svg, a {
         }
     }
 }
+
+.mmenu {
+    position: fixed;
+    left: -200vw;
+    top: 0px;
+    width: 100vw;
+    bottom: 0px;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.30);
+    &--active {
+        left: 0vw;
+        .mmenu__block {
+            left: 0vw;
+        }
+    }
+    &__block {
+        background-color: $light;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        max-width: 600px;
+        left: -100vw;
+        transition: 0.3s all;
+    }
+    a {
+        color: $dark;
+        display: block;
+        text-decoration: none;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+}

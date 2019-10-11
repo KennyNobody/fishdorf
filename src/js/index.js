@@ -288,4 +288,56 @@ import Swiper from 'swiper';
 
 	})();
 
+	(function initSinglePartySlider() {
+		const singlePartySwiper = new Swiper ('.s-party__slider', {
+			loop: false,
+			slidesPerView: 1,
+			spaceBetween: 20,
+			direction: 'horizontal',
+			breakpoints: {
+				1080: {
+					direction: 'vertical',
+
+				},
+				// 680: {
+				// 	slidesPerView: 2,
+				// 	spaceBetween: 20
+				// },
+				// 900: {
+				// 	slidesPerView: 3,
+				// 	spaceBetween: 20
+				// }
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.s-party__slider-pagination',
+				bulletClass: 's-party__slider-bullet',
+				bulletActiveClass: 's-party__slider-bullet--active',
+				clickable: true,
+				renderBullet: function (index, className) {
+					return '<div class="' + className + '"><div class="s-party__slider-line"></div>0' + (index + 1) + '</div>';
+				}
+			}
+		});
+	})();
+
+	(function toggleMenu(){
+		const burger = document.querySelector('.header__burger');
+		const menu = document.querySelector('.mmenu');
+
+		if (burger && menu) {
+			burger.addEventListener('click', function() {
+				menu.classList.toggle('mmenu--active');
+			})
+
+			menu.addEventListener('click', function(e) {
+				e.stopPropagation();
+				menu.classList.remove('mmenu--active');
+			})
+		}
+	})();
+
 })();

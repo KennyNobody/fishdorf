@@ -1,8 +1,18 @@
 .map {
-	height: 680px;
+	height: 850px;
+	position: relative;
 	color: $light;
 	background-color: $accent;
+	background-position: center;
 	@include r(1080) {
 		display: none;
+	}
+	&__container {
+		position: relative;
+		svg {
+			position: relative;
+			top: 103px;
+			left: -15px;
+		}
 	}
 }

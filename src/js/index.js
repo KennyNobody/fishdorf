@@ -85,7 +85,7 @@ import Swiper from 'swiper';
 	(function initPartySlider() {
 		const partySwiper = new Swiper ('.front-party__swiper-container', {
 			loop: false,
-			slidesPerView: 4,
+			slidesPerView: 1,
 			spaceBetween: 20,
 			navigation: {
 				nextEl: '.front-party__btn--next',
@@ -93,12 +93,8 @@ import Swiper from 'swiper';
 				disabledClass: 'front-party__btn--disabled'
 			},
 			breakpoints: {
-				500: {
-					slidesPerView: 1,
-					spaceBetween: 20
-				},
-				680: {
-					slidesPerView: 3,
+				520: {
+					slidesPerView: 2,
 					spaceBetween: 20
 				},
 				900: {
@@ -116,7 +112,7 @@ import Swiper from 'swiper';
 	(function initNewsSlider() {
 		const newsSwiper = new Swiper ('.front-news__slider', {
 			loop: false,
-			slidesPerView: 3,
+			slidesPerView: 1,
 			spaceBetween: 20,
 			navigation: {
 				nextEl: '.front-news__next',
@@ -124,10 +120,6 @@ import Swiper from 'swiper';
 				disabledClass: 'front-news__btn--disabled'
 			},
 			breakpoints: {
-				480: {
-					slidesPerView: 1,
-					spaceBetween: 0
-				},
 				680: {
 					slidesPerView: 2,
 					spaceBetween: 20
@@ -160,14 +152,19 @@ import Swiper from 'swiper';
 					let galleryTop = new Swiper(roomSliders[i].querySelector('.hotels__gallery-top'), {
 						spaceBetween: 10,
 						slidesPerView: 1,
-						direction: 'vertical',
+						direction: 'horizontal',
 						slideToClickedSlide: true,
 						loop: true,
 						effect: 'fade',
 						navigation: {
 							nextEl: '.swiper-button-next',
 							prevEl: '.swiper-button-prev',
-						}
+						},
+						1080: {
+							direction: 'vertica',
+							loop: false,
+							effect: false,
+						},
 					});
 					galleryTop.controller.control = galleryThumbs;
 					galleryThumbs.controller.control = galleryTop;

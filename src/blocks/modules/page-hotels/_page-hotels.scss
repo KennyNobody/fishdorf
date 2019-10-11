@@ -5,6 +5,10 @@
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 80px;
+		@include r(1080) {
+			display: block;
+			height: auto;
+		}
 		&:nth-child(4n+1) {
 			.hotels__column-slider {
 				&:before {
@@ -51,11 +55,20 @@
 	&__column-text {
 		width: calc(100% / 12 * 4 - 10px);
 		padding-top: 10px;
+		@include r(1080) {
+			max-width: 500px;
+			width: 100%;
+			margin-bottom: 40px;
+		}
 	}
 	&__column-slider {
 		position: relative;
 		width: calc(100% / 12 * 8 - 10px);
 		display: flex;
+		@include r(1080) {
+			display: block;
+			width: 100%;
+		}
 		&:before {
 			content: "";
 			position: absolute;
@@ -74,6 +87,9 @@
 		padding-right: 20px;
 		padding-left: 29px;
 		flex-shrink: 0;
+		@include r(1080) {
+			display: none;
+		}
 		.swiper-slide {
 			transition: 0.3s all;
 			opacity: 0.4;
@@ -96,9 +112,36 @@
 		flex-grow: 1;
 		padding-top: 32px;
 		padding-bottom: 32px;
+		@include r(1080) {
+			display: block;
+			.swiper-button-next {
+				display: flex;
+				color: $light;
+			}
+			.swiper-button-prev {
+				display: flex;
+				color: $light;
+			}
+		}
+		.swiper-button-next {
+			display: none;
+			outline: none;
+		}
+		.swiper-button-prev {
+			display: none;
+			outline: none;
+		}
 		.swiper-slide {
 			transition: 0.3s all;
 			opacity: 0;
+			@include r(1080) {
+				height: auto;
+				img {
+					width: 100%;
+					height: auto;
+					display: block;
+				}
+			}
 		}
 		.swiper-slide-active {
 			opacity: 1;

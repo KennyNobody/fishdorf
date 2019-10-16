@@ -296,14 +296,6 @@ import Swiper from 'swiper';
 					direction: 'vertical',
 
 				},
-				// 680: {
-				// 	slidesPerView: 2,
-				// 	spaceBetween: 20
-				// },
-				// 900: {
-				// 	slidesPerView: 3,
-				// 	spaceBetween: 20
-				// }
 			},
 			navigation: {
 				nextEl: '.swiper-button-next',
@@ -334,6 +326,29 @@ import Swiper from 'swiper';
 				e.stopPropagation();
 				menu.classList.remove('mmenu--active');
 			})
+		}
+	})();
+
+	(function toggleMap(){
+		const overlays = document.querySelectorAll('*[map-block]');
+		const blocks = document.querySelectorAll('*[map-item]')
+		if (overlays && blocks && overlays.length == blocks.length) {
+			
+			let activeNumber;
+
+			for (let i = 0; i < overlays.length; i++) {
+				overlays[i].addEventListener('click', function() {
+					activeNumber = overlays[i].getAttribute('map-block');
+					selectBlocks();
+				})
+			}
+
+			function selectBlocks() {
+				for (let z = 0; z < blocks.length; z++) {
+					blocks[z].classList.remove('map__item--active');
+				}
+				blocks[activeNumber].classList.add('map__item--active');
+			}
 		}
 	})();
 

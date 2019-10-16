@@ -9,10 +9,70 @@
 	}
 	&__container {
 		position: relative;
+		height: 100%;
 		svg {
 			position: relative;
 			top: 103px;
 			left: -15px;
+			opacity: 1;
+		}
+	}
+	&__overlay {
+		transition: 0.3s all;
+		cursor: pointer;
+		fill: $red !important;
+		opacity: 0;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	&__items {
+		position: absolute;
+		z-index: 2;
+		background: rgba(255, 255, 255, 0.7);
+		color: $dark;
+		right: 0px;
+		bottom: 80px;
+		width: 604px;
+		border-radius: 8px;
+		overflow: hidden; 
+		&-head {
+			background-color: $light;
+			padding-left: 26px;
+			padding-right: 26px;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			display: flex;
+			justify-content: space-between;
+			strong {
+				font-size: 30px;
+				line-height: 38px;
+				font-family: $title-font;
+				font-weight: 1000;
+			}
+		}
+		&-content {
+			padding-top: 17px;
+			padding-left: 26px;
+			padding-right: 26px;
+			padding-bottom: 26px;
+		}
+	}
+	&__price {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 22px;
+		b, strong {
+			font-weight: 600;
+			font-size: 30px;
+			line-height: 37px;
+			font-family: $main-font;
+		}
+	}
+	&__item {
+		display: none;
+		&--active {
+			display: block;
 		}
 	}
 }

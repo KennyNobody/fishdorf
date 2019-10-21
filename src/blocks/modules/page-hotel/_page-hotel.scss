@@ -51,7 +51,7 @@
 		margin-bottom: 15px;
 	}
 	&__item {
-		margin-right: 39px;
+		margin-right: 37px;
 		display: flex;
 		align-items: center;
 		flex-shrink: 0;
@@ -64,6 +64,9 @@
 		}
 		span {
 
+		}
+		&:last-child {
+			margin-right: 0px;
 		}
 	}
 	&__control {

@@ -98,6 +98,7 @@
 		width: 212px;
 		padding-top: 18px;
 		border-right: 2px solid #DDEFE3;
+
 		@include r(1080) {
 			border: none;		}
 		@include r(640) {
@@ -117,8 +118,13 @@
 	&__booking {
 		width: 128px;
 		height: 135px;
-		background-color: $accent;
-		margin-bottom: 60px;
+		display: block;
+		margin-bottom: 50px;
+		img {
+			display: block;
+			max-width: 138px;
+			width: 100%;
+		}
 		@include r(640) {
 			margin-left: auto;
 			margin-right: auto;

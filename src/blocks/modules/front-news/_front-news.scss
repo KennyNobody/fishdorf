@@ -86,16 +86,10 @@
 		}
 	}
 	&__slider-wrapper {
-		padding-top: 52px;
+		padding-top: 0px;
 		padding-bottom: 52px;
 		display: flex;
 		justify-content: space-between;
-		.swiper-slide-active {
-			top: -52px;
-		}
-		.swiper-slide-next {
-			top: 0px;
-		}
 	}
 	&__article {
 		border-radius: 8px;

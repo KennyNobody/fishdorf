@@ -331,16 +331,36 @@ import Swiper from 'swiper';
 
 	(function toggleMap(){
 		const overlays = document.querySelectorAll('*[map-block]');
-		const blocks = document.querySelectorAll('*[map-item]')
+		const blocks = document.querySelectorAll('*[map-item]');
+
+		console.log(overlays.length);
+		console.log(blocks.length);
+
+		let flagMap = false;
+
 		if (overlays && blocks && overlays.length == blocks.length) {
 			
 			let activeNumber;
 
 			for (let i = 0; i < overlays.length; i++) {
+				overlays[i].addEventListener('mouseover', function() {
+					if (flagMap == false) {
+						activeNumber = overlays[i].getAttribute('map-block') - 1;
+						selectBlocks();
+					}
+				});
+
+				overlays[i].addEventListener('mouseout', function() {
+					if (flagMap == false) {
+						hideBlocks();
+					}
+				});
+
 				overlays[i].addEventListener('click', function() {
-					activeNumber = overlays[i].getAttribute('map-block');
+					activeNumber = overlays[i].getAttribute('map-block') - 1;
 					selectBlocks();
-				})
+					flagMap = true;
+				});
 			}
 
 			function selectBlocks() {
@@ -348,6 +368,12 @@ import Swiper from 'swiper';
 					blocks[z].classList.remove('map__item--active');
 				}
 				blocks[activeNumber].classList.add('map__item--active');
+			}
+
+			function hideBlocks() {
+				for (let z = 0; z < blocks.length; z++) {
+					blocks[z].classList.remove('map__item--active');
+				}
 			}
 		}
 	})();

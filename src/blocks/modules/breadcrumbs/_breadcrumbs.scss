@@ -1,5 +1,8 @@
 .breadcrumbs {
 	margin-bottom: 70px;
+	@include r(1080) {
+		display: none;
+	}
 	&__container {
 
 	}

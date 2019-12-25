@@ -12,7 +12,7 @@
 		&:nth-child(4n+1) {
 			.hotels__column-slider {
 				&:before {
-					background-color: $green-light;
+					background-color: rgba(221, 239, 227, 0.5);;
 				}
 			}
 			.hotels__link {
@@ -23,7 +23,7 @@
 			.hotels__column-slider {
 				order: -1;
 				&:before {
-					background-color: $accent;
+					background-color: rgba(0, 116, 118, 0.5);
 				}
 			}
 			.hotels__link {
@@ -44,7 +44,7 @@
 			.hotels__column-slider {
 				order: -1;
 				&:before {
-					background-color: $dark;
+					background-color: rgba(42, 57, 59, 0.5);;
 				}
 			}
 			.hotels__link {

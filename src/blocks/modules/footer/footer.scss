@@ -100,7 +100,8 @@
 		border-right: 2px solid #DDEFE3;
 
 		@include r(1080) {
-			border: none;		}
+			border: none;		
+		}
 		@include r(640) {
 			width: auto;
 			text-align: center;
@@ -141,6 +142,18 @@
 	}
 	&__column {
 		width: calc(100% / 3);
+	}
+	.menu {
+		a {
+			text-decoration: none;
+			color: $dark;
+			margin-bottom: 10px;
+			display: block;
+			&:hover {
+				color: $accent;
+			}
+		}
+		
 	}
 }
 

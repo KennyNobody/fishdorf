@@ -144,7 +144,7 @@ import Swiper from 'swiper';
 						watchSlidesVisibility: true,
 						watchSlidesProgress: true,
 						direction: 'vertical',
-						touchRatio: 0.2,
+						loopedSlides: 1,
 						loop: true,
 						slideToClickedSlide: true,
 						centeredSlides: true,
@@ -161,7 +161,7 @@ import Swiper from 'swiper';
 							prevEl: '.swiper-button-prev',
 						},
 						1080: {
-							direction: 'vertica',
+							direction: 'vertical',
 							loop: false,
 							effect: false,
 						},

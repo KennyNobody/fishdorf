@@ -1,7 +1,6 @@
 .hotels {
 	&__article {
 		position: relative;
-		height: 404px;
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 80px;
@@ -65,9 +64,11 @@
 		position: relative;
 		width: calc(100% / 12 * 8 - 10px);
 		display: flex;
+		height: 404px;
 		@include r(1080) {
 			display: block;
 			width: 100%;
+			height: auto;
 		}
 		&:before {
 			content: "";
@@ -156,9 +157,9 @@
 		}
 	}
 	&__title {
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		overflow: hidden;
+		// white-space: nowrap;
+		// text-overflow: ellipsis;
+		// overflow: hidden;
 		margin-bottom: 30px;
 	}
 	&__text {

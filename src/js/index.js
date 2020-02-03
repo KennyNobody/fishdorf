@@ -88,8 +88,8 @@ import Swiper from 'swiper';
 			slidesPerView: 1,
 			spaceBetween: 20,
 			navigation: {
-				nextEl: '.front-party__btn--next',
-				prevEl: '.front-party__btn--prev',
+				prevEl: '.front-party__prev',
+				nextEl: '.front-party__next',
 				disabledClass: 'front-party__btn--disabled'
 			},
 			breakpoints: {
@@ -184,7 +184,7 @@ import Swiper from 'swiper';
 					let loopStatus;
 					let paginationInfo;
 
-					if (lengthSlider > 1 && lengthSlider < 5) {
+					if (lengthSlider > 0 && lengthSlider < 5) {
 						loopStatus = false;
 						paginationInfo = {
 							el: '.swiper-pagination',
@@ -221,6 +221,9 @@ import Swiper from 'swiper';
 						});
 						galleryTop.controller.control = galleryThumbs;
 						galleryThumbs.controller.control = galleryTop;
+					} else {
+						roomSliders[i].querySelector('.swiper-button-prev').style.display="none";
+						roomSliders[i].querySelector('.swiper-button-next').style.display="none";
 					}
 
 				})();

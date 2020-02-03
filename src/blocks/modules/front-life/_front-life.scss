@@ -2,7 +2,7 @@
 	&__container {
 		position: relative;
 		padding-top: 174px;
-		padding-bottom: 200px;
+		padding-bottom: 160px;
 		@include r(1080) {
 			padding-top: 60px;
 			padding-bottom: 60px;
@@ -27,7 +27,6 @@
 	}
 	&__title {
 		position: relative;
-		left: -82px;
 		margin-bottom: 22px;
 		@include r(1080) {
 			left: 0px;

@@ -29,6 +29,8 @@
 		display: block;
 		&--accent {
 			color: $accent;
+			font-weight: 600;
+			display: block;
 		}
 		&--link {
 			text-decoration: none;
@@ -44,6 +46,16 @@
 			&:hover {
 				color: $accent;
 			}
+		}
+		svg {
+			fill: $accent;
+			display: inline-block;
+			height: 24px;
+			width: 24px;
+		}
+		&--flex {
+			display: flex;
+			align-items: center;
 		}
 	}
 }

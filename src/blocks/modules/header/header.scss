@@ -6,6 +6,11 @@
 		@include r(1080) {
 			align-items: center;
 		}
+		&:first-child {
+			@include r(650) {
+				margin-bottom: 30px;
+			}
+		}
 	}
 	&__logo {
 		display: block;
@@ -36,18 +41,33 @@
 		padding-top: 21px;
 	}
 	&__topline {
-		margin-bottom: 50px;
+		margin-bottom: 22px;
 		display: flex;
 		justify-content: space-between;
 		@include r(1080) {
-			justify-content: flex-end;
+			// justify-content: flex-end;
 			margin-bottom: 0px;
 			align-items: center;
+		}
+		@include r(650) {
+			justify-content: flex-end;
+		}
+	}
+	&__mobline {
+		display: none;
+		@include r(650) {
+			display: block;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 	&__items {
 		display: flex;
 		@include r(1080) {
+			flex-grow: 1;
+		}
+		@include r(650) {
 			display: none;
 		}
 	}
@@ -56,10 +76,12 @@
 		margin-right: 56px;
 		text-decoration: none;
 		&--link {
-			margin-right: 0px;
 			&:hover {
 				opacity: 0.7;
 			}
+		}
+		&:last-child {
+			margin-right: 0px;
 		}
 		svg {
 			width: 21px;
@@ -70,6 +92,18 @@
 		p {
 			color: $dark;
 		}
+		&--adress {
+			padding-top: 20px;
+			@include r(1080) {
+				display: none;
+			}
+		}
+	}
+	&__subtitle {
+		text-transform: uppercase;
+		color: $accent;
+		font-weight: bold;
+		margin-bottom: 12px;
 	}
 	&__bottom-line {
 		display: flex;

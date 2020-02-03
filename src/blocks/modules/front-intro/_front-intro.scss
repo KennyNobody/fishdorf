@@ -8,11 +8,14 @@
 			display: block;
 		}
 		&--video {
-			margin-bottom: 105px;
+			// margin-bottom: 105px;
 			position: relative;
 			padding-bottom: 56.25%;
 			height: 0;
 			overflow: hidden;
+			@include r(1080) {
+				margin-bottom: 20px;
+			}
 			iframe {
 				position: absolute;
 				top: 0;

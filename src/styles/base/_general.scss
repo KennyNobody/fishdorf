@@ -27,6 +27,9 @@ svg, a {
     &--page {
         padding-top: 64px;
         padding-bottom: 80px;
+        @include r(1080) {
+            padding-top: 32px;
+        }
     }
 }
 
@@ -68,7 +71,7 @@ svg, a {
     b, strong {
         font-weight: bold;
     }
-    i {
+    i, em {
         font-style: italic;
     }
     h1, h2, h3, h4, h5, h6 {
